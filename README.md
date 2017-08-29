@@ -5,7 +5,7 @@ in <i>SF crime(2).ipynb</i>, XGB classifier was used and yielded better results.
 
 ![alt text](https://github.com/yinniyu/kaggle_SFCrime/blob/master/feature_importance.png)
 
-<p> Using Tableau, a map of the crime activity is generated as shown (for interactive map, click <a href="https://public.tableau.com/shared/9G5CTJZ4Y?:display_count=yes"> here </a>).
+<p> Using Tableau, a map of the crime activity is generated as shown (for interactive map, click <a href="https://public.tableau.com/shared/F3RWWW3FS?:display_count=yes"> here </a>).
 <p align="center">
   <img src="crime_location.png" width="650"/>
 </p></p>

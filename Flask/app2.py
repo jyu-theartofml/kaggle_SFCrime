@@ -35,20 +35,6 @@ def classify(document):
     return crime[y[0]], proba
 
 
-'''
-def train(document, y):
-
-    X = vect.transform([document])
-    clf.partial_fit(X, [y]) '''
-
-#def sqlite_entry(path, document, y):
-    #conn = sqlite3.connect(path)
-    #c = conn.cursor()
-    #c.execute("INSERT INTO review_db (review, sentiment, date)"\
-    #" VALUES (?, ?, DATETIME('now'))", (document, y))
-    #conn.commit()
-    #conn.close()
-
 month_list=['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep',
    'Oct', 'Nov', 'Dec']
 neighborhood_list=['BAYVIEW', 'CENTRAL', 'INGLESIDE', 'MISSION',

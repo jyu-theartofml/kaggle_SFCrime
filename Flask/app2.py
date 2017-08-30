@@ -7,7 +7,6 @@ import os
 import numpy as np
 import pandas as pd
 
-# import word vector from local dir
 
 
 app2 = Flask(__name__)

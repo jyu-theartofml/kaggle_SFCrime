@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Crime Classification</title>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans|Encode+Sans+Semi+Condensed|Open+Sans:400,700" rel="stylesheet">
+<style>
+h2 {
+    text-align: center;
+    font-family: 'Open Sans: 400,700', sans-serif;
+    color: #5F9EA0;
+    font-size: 30px;
+  }
+
+table {
+  color:DimGrey;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 16px;
+}
+
+input[type=text] {padding:5px; border:2px solid #ccc;
+-webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type=text]:focus {border-color:#333; }
+
+input[type=submit] {padding:5px 10px; background:#555555; border:0 none;
+    cursor:pointer; color:white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+
+</style>
+</head>
+<body>
+
+<h2> Please select and enter info below</h2>
+
+{% from "_formhelpers.html" import render_field %}
+ <h3 color><form action="/results" method="POST"><table>
+     <td>
+      <label>Select Neighborhood : </label>
+        <select name ="neighborhood" width="300px">
+          {% for x in neighborhood_list %}
+          <option value="{{ x }}"{% if loop.first %} SELECTED{% endif %}>{{ x }}</option>
+          {% endfor %}
+        </select>
+      </td>
+
+      <tr>
+      <td>
+       <label>Select Month : </label>
+         <select name ="month" width="300px">
+           {% for x in month_list %}
+           <option value="{{ x }}"{% if loop.first %} SELECTED{% endif %}>{{ x }}</option>
+           {% endfor %}
+         </select>
+       </td></tr>
+
+     <tr>
+     <td>
+      <label>Select Hour : </label>
+        <select name ="hour" width="300px">
+          {% for x in hour_list %}
+          <option value="{{ x }}"{% if loop.first %} SELECTED{% endif %}>{{ x }}</option>
+          {% endfor %}
+        </select>
+      </td></tr>
+</table>
+     <! --create two cells for the GPSinput form-->
+<table>
+        {% for field in form %}
+        <tr>
+        <td>{{field.name}}</td><td>{{field}}</td>
+      <td>{{field.label}}</td>
+    </tr>
+        {% endfor %}
+
+      </table>
+
+      <div>
+         <input type=submit value='Submit' name='submit_btn'>
+       </div>
+     </form></h3>
+
+
+  </body>
+</html>
